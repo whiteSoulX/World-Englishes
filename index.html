@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Englishes: Small Island to Global Power</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ENG538 <span class="dot">.</span></div>
+        
+        <ul class="nav-links" id="nav-menu">
+            <li class="menu-close-btn" id="close-btn"><i class="fas fa-times"></i></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#history">Origins</a></li>
+            <li><a href="#vocab">Vocab Cards</a></li> <li><a href="#map-section">Migration</a></li>
+            <li><a href="#theories">Theories</a></li>
+            <li><a href="#varieties">Banglish</a></li>
+            <li><a href="#literature">Literature</a></li>
+            <li><a href="#gelt">GELT</a></li>
+            <li><a href="#contact" class="btn-nav">Contact</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in-up">
+            <h1>From a <span class="highlight">Small Island</span> <br>to a Global Language</h1>
+            <p class="hero-subtitle">Tracing the evolution of English from 5 million Anglo-Saxons to over 750 million global citizens.</p>
+            
+            <div class="stats-row">
+                <div class="stat-box">
+                    <i class="fas fa-users"></i>
+                    <h3>750M+</h3>
+                    <p>Global Speakers</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>60+</h3>
+                    <p>Official Countries</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-percentage"></i>
+                    <h3>50%</h3>
+                    <p>French/Latin Vocab</p>
+                </div>
+            </div>
+
+            <a href="#history" class="btn-primary">Start The Journey <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </header>
+
+    <section id="history" class="section-padding">
+        <div class="container">
+            <div class="section-title scroll-trigger">
+                <h2>Origins & Evolution</h2>
+                <p>English is a West Germanic language that absorbed the world.</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-item left scroll-trigger">
+                    <div class="content">
+                        <h3>5000 B.C. - Proto-Indo-European</h3>
+                        <p>The ancestral root. English belongs to the Germanic branch, making it a cousin to German and Dutch.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right scroll-trigger">
+                    <div class="content">
+                        <h3>450-1100 A.D. - Old English</h3>
+                        <p>The language of Beowulf. Germanic tribes (Angles, Saxons) mix with Vikings (Old Norse).</p>
+                    </div>
+                </div>
+                <div class="timeline-item left scroll-trigger">
+                    <div class="content">
+                        <h3>1100-1500 A.D. - Middle English</h3>
+                        <p>The Norman Conquest (1066) brings French. English becomes the language of the masses, French for the elite.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right scroll-trigger">
+                    <div class="content">
+                        <h3>1600-Present - Modern English</h3>
+                        <p>The Great Vowel Shift, Shakespeare, and colonial expansion spread the language globally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vocab" class="section-padding bg-dark">
+        <div class="container">
+            <div class="section-title text-white scroll-trigger">
+                <h2>Vocabulary Roots (Flip Cards)</h2>
+                <p>Hover over the cards to reveal the modern English evolution.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="flip-card scroll-trigger">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon-circle">🏠</div>
+                            <h3>Hus-</h3>
+                            <p>Anglo-Saxon Origin</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Husband</h3>
+                            <p>Meaning: Master of the house.</p>
+                            <p class="tiny">Also: Husbandry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card scroll-trigger">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon-circle">🍰</div>
+                            <h3>Kaka</h3>
+                            <p>Old Norse (Viking) Origin</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Cake</h3>
+                            <p>A direct loan word from Scandinavian invaders.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card scroll-trigger">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon-circle">⚖️</div>
+                            <h3>Acumen</h3>
+                            <p>Latin / French Origin</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Judgment</h3>
+                            <p>Ability to make good judgments and quick decisions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card scroll-trigger">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="icon-circle">⚔️</div>
+                            <h3>Chivalrous</h3>
+                            <p>French Origin</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Gallant</h3>
+                            <p>Courteous behavior, especially that of a man toward women.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="map-section" class="section-padding">
+        <div class="container">
+            <div class="section-title scroll-trigger">
+                <h2>The Global Migration</h2>
+                <p>Visualizing the "Three Diasporas" that created World Englishes.</p>
+            </div>
+
+            <div class="map-wrapper shadow-box scroll-trigger">
+                <div id="map"></div>
+                <div class="map-controls">
+                    <h3>Flight Log ✈️</h3>
+                    <p id="map-status">Status: Ready for Takeoff...</p>
+                    <button id="start-btn" class="btn-map">Start Journey</button>
+                </div>
+            </div>
+            
+            <div class="info-grid mt-40 scroll-trigger">
+                <div class="info-card">
+                    <div class="step-badge">1</div>
+                    <h4>1st Diaspora</h4>
+                    <p>Expansion within the British Isles (Wales, Scotland, Ireland).</p>
+                </div>
+                <div class="info-card">
+                    <div class="step-badge">2</div>
+                    <h4>2nd Diaspora</h4>
+                    <p>Settlement colonies in North America (17th C) and Australia/NZ (18th C).</p>
+                </div>
+                <div class="info-card">
+                    <div class="step-badge">3</div>
+                    <h4>3rd Diaspora</h4>
+                    <p>Trade colonies in Asia & Africa (India, Nigeria, Singapore) creating "New Englishes".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="theories" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title scroll-trigger">
+                <h2>Theoretical Frameworks</h2>
+                <p>Scholarly models for understanding World Englishes.</p>
+            </div>
+
+            <div class="tabs-container scroll-trigger">
+                <button class="tab-btn active" onclick="openTab('kachru')">Kachru's Three Circles</button>
+                <button class="tab-btn" onclick="openTab('schneider')">Schneider's Dynamic Model</button>
+            </div>
+
+            <div id="kachru" class="tab-content active fade-in-up">
+                <div class="grid-3">
+                    <div class="circle-card inner">
+                        <i class="fas fa-home"></i>
+                        <h4>Inner Circle</h4>
+                        <p><strong>Norm-Providing (ENL)</strong></p>
+                        <p>USA, UK, Australia</p>
+                        <span class="highlight-text">320M+ Speakers</span>
+                    </div>
+                    <div class="circle-card outer">
+                        <i class="fas fa-building"></i>
+                        <h4>Outer Circle</h4>
+                        <p><strong>Norm-Developing (ESL)</strong></p>
+                        <p>India, Bangladesh, Nigeria</p>
+                        <span class="highlight-text">150M+ Speakers</span>
+                    </div>
+                    <div class="circle-card expanding">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>Expanding Circle</h4>
+                        <p><strong>Norm-Dependent (EFL)</strong></p>
+                        <p>China, Japan, Brazil</p>
+                        <span class="highlight-text">1 Billion+ Speakers</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="schneider" class="tab-content fade-in-up">
+                <div class="process-wrapper">
+                    <div class="process-step">
+                        <div class="step-icon">1</div>
+                        <h4>Foundation</h4>
+                        <p>English is brought by settlers/trade.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">2</div>
+                        <h4>Exonormative</h4>
+                        <p>Colony looks outward (to UK) for norms.</p>
+                    </div>
+                    <div class="process-step active-step">
+                        <div class="step-icon">3</div>
+                        <h4>Nativization</h4>
+                        <p>Crucial Phase. Local sounds/grammar mix.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">4</div>
+                        <h4>Endonormative</h4>
+                        <p>Local norms accepted (Banglish).</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">5</div>
+                        <h4>Differentiation</h4>
+                        <p>Internal dialects develop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="varieties" class="section-padding">
+        <div class="container">
+            <div class="section-title scroll-trigger">
+                <h2>Case Study: Banglish</h2>
+                <p>Bangladeshi English is moving into Phase 4 (Endonormative Stabilization).</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="feature-card scroll-trigger">
+                    <div class="card-icon">🗣️</div>
+                    <h4>Phonology</h4>
+                    <ul class="feature-list">
+                        <li><strong>Vowel Mergers:</strong> No distinction between /z/ and /j/.</li>
+                        <li><strong>Cluster Breaking:</strong> 'School' becomes 'Iskul'.</li>
+                        <li><strong>Sound Swap:</strong> 'v' and 'w' are interchangeable.</li>
+                    </ul>
+                </div>
+                <div class="feature-card scroll-trigger" style="transition-delay: 0.2s;">
+                    <div class="card-icon">🧠</div>
+                    <h4>Lexical Innovation</h4>
+                    <ul class="feature-list">
+                        <li><strong>Hybrid Words:</strong> "Policewala", "Rickshawala".</li>
+                        <li><strong>Reduplication:</strong> "Small-small things".</li>
+                        <li><strong>Borrowing:</strong> "Mastan" (Gangster).</li>
+                    </ul>
+                </div>
+                <div class="feature-card scroll-trigger" style="transition-delay: 0.4s;">
+                    <div class="card-icon">🤝</div>
+                    <h4>Pragmatics</h4>
+                    <ul class="feature-list">
+                        <li><strong>Politeness:</strong> "What is your good name?"</li>
+                        <li><strong>Kinship:</strong> "Cousin brother", "Uncle".</li>
+                        <li><strong>Tags:</strong> "You are coming, isn't it?"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="literature" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title scroll-trigger">
+                <h2>Literature & Identity</h2>
+            </div>
+            
+            <div class="grid-2 align-center">
+                <div class="lit-box scroll-trigger">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <blockquote>
+                        "The language I speak becomes mine, its distortions, its queerness, all mine, mine alone... It is half English, half Indian, funny perhaps, but it is honest."
+                    </blockquote>
+                    <cite>- Kamala Das (The Patriot)</cite>
+                </div>
+                
+                <div class="lit-content scroll-trigger">
+                    <h3>Writing Back to the Center</h3>
+                    <p>South Asian writers like <strong>Arundhati Roy</strong>, <strong>Tahmina Anam</strong>, and <strong>R.K. Narayan</strong> have nativized English.</p>
+                    <p>They incorporate local flavor, idioms, and sentence structures that reflect the South Asian soul, proving that English is no longer just a British asset—it is a global property.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gelt" class="section-padding">
+        <div class="container">
+            <div class="section-title scroll-trigger">
+                <h2>GELT vs Traditional ELT</h2>
+                <p>Global English Language Teaching shifts the focus from "Native" to "Global".</p>
+            </div>
+            
+            <div class="table-responsive scroll-trigger">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Traditional ELT</th>
+                            <th>GELT (New Model)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Target</strong></td>
+                            <td>Native English Speakers</td>
+                            <td>All English Users (Global)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Norms</strong></td>
+                            <td>Standard British/American</td>
+                            <td>Diverse, flexible forms</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Role Model</strong></td>
+                            <td>Native Speaker</td>
+                            <td>Expert / Multicompetent User</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Goal</strong></td>
+                            <td>Native-like proficiency</td>
+                            <td>Communicative Competence</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-dark text-white">
+        <div class="container">
+            <div class="grid-2">
+                <div class="about-text scroll-trigger">
+                    <h2>About This Project</h2>
+                    <p>This website was developed as the final submission for the <strong>ENG538: World Englishes</strong> course at ULAB.</p>
+                    <p>It demonstrates an understanding of:</p>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check-circle"></i> Historical Linguistics</li>
+                        <li><i class="fas fa-check-circle"></i> Sociolinguistic Theories</li>
+                        <li><i class="fas fa-check-circle"></i> Postcolonial Identity</li>
+                    </ul>
+                </div>
+                
+                <div id="contact" class="contact-card scroll-trigger">
+                    <h3>Contact & Feedback</h3>
+                    <form class="c-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea rows="4" placeholder="Your Message..."></textarea>
+                        <button class="btn-primary full-width" type="button" onclick="alert('Message Sent!')">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <div class="logo-footer">ENG538 Project</div>
+            <p>Exploring the linguistic heritage of the world.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 World Englishes Final. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
