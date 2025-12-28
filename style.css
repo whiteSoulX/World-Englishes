@@ -41,7 +41,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--primary); }
 /* ==================== 3. HERO SECTION (Parallax) ==================== */
 .hero {
     height: 100vh;
-    background: url('/small-island.png') no-repeat center center/cover;
+    background: url('https://raw.githubusercontent.com/whiteSoulX/World-Englishes/refs/heads/main/small-island.png') no-repeat center center/cover;
     background-attachment: fixed; 
     position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: white;
 }
@@ -171,4 +171,5 @@ footer { background: var(--secondary); color: white; padding: 50px 0; text-align
     .left, .right { left: 0; }
     
     .scroll-trigger { opacity: 1; transform: none; } /* Disable scroll anims on mobile */
+
 }
